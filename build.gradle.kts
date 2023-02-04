@@ -1,6 +1,28 @@
-import org.gradle.api.tasks.testing.logging.TestExceptionFormat
-import org.gradle.api.tasks.testing.logging.TestLogEvent
+plugins {
+    java
+    kotlin("jvm") version "1.8.0"
+    application
+}
 
-plugin {
+group = "org.example"
+version = "1.0-SNAPSHOT"
 
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(kotlin("test"))
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(8)
+}
+
+application {
+    mainClass.set("MainKt")
 }
