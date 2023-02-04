@@ -1,7 +1,4 @@
-package io.github.Gurm-Studios;
+package io.github.GurmStudios;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
 }
